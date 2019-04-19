@@ -1,0 +1,35 @@
+package jp.co.internous.action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test {
+
+	public static void main(String[] args){
+		Person taro=new Person();
+		taro.name="山田太郎";
+		taro.age=20;
+
+
+		System.out.println(taro.name);
+		System.out.println(taro.age);
+
+
+		List<String> list=new ArrayList<String,String>();
+
+
+		list.add("山田太郎","20");
+		list.add("木村次郎","18");
+		list.add("鈴木花子","16");
+		list.add("直島美夢","23");
+
+
+		for(String s:list){
+			System.out.println(s);
+		}
+
+
+
+	}
+
+}
