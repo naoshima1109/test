@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -55,11 +54,31 @@ public class MySQLServlet extends HttpServlet {
 				String userPassword=rs.getString("password");
 				out.println("<p>");
 				out.println("ユーザーID:"+userId+",ユーザー名:"+userName+",パスワード:"+userPassword);
-				out.println("<p>");
+				out.println("</p>");
 			}
+
+
 			rs.close();
 			stmt.close();
 		}catch(ClassNotFoundException e){
+			out.println("ClassNotFoundException:"+ e.getMessage());
+		}catch (SQLException e){
+			out.println("SQLException:"+ e.getMessage());
+		}catch(Exception e){
+			out.println("Exseption:"+ e.getMessage());
+		}finally{
+			try{
+				if(conn !=null){
+					conn.close();
+				}
+			}catch (SQLException e){
+				out.println("SQLException:"+ e.getMessage());
+			}
+		}
 
+
+		out.println("</body>");
+		out.println("</html>");
 	}
 
+}
