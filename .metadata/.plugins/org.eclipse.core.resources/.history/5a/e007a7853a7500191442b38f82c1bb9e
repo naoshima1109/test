@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.internousdev.webproj3.dao;
+
+/**
+ * @author internousdev
+ *
+ */
+public class HelloStrutsDAO {
+
+}
