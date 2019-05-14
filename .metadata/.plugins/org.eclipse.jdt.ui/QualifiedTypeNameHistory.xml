@@ -6,8 +6,8 @@
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="com.internousdev.login.dto.LoginDTO"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="sun.rmi.transport.Connection"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj2.util.DBConnector"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj3.dao.HelloStrutsDAO"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 </qualifiedTypeNameHistroy>
