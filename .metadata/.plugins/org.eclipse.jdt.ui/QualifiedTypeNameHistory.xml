@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="jp.co.internous.action.Person"/>
 <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
@@ -10,4 +9,5 @@
 <fullyQualifiedTypeName name="com.internousdev.webproj2.util.DBConnector"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj3.dao.HelloStrutsDAO"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
