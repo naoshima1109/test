@@ -1,0 +1,24 @@
+package com.internousdev.webproj5.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.webproj5.dto.HelloStrutsDTO;
+import com.internousdev.webproj5.util.DBConnector;
+
+public class HelloStrutsDAO {
+
+
+	List<HelloStrutsDTO>helloStrutsDTOList =new ArrayList<HelloStrutsDTO>();
+	List<HelloStrutsDTO> select(){
+		DBConnector db=new DBConnector();
+		Connection con=db.getConnection();
+
+
+
+
+		String sql ="select * from users";
+	}
+
+}
