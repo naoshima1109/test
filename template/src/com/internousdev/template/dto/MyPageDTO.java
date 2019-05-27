@@ -7,33 +7,33 @@ public class MyPageDTO {
 	private String payment;
 
 	public String getItemName(){
-		return itemName;
+		return this.itemName;
 	}
 	public void setItemName(String itemName){
 		this.itemName=itemName;
 	}
 
-	public String setTotalPrice(){
-		return totalPrice;
+	public String getTotalPrice(){
+		return this.totalPrice;
 	}
 
-	public void getTotalPrice(String totalPrice){
+	public void setTotalPrice(String totalPrice){
 		this.totalPrice=totalPrice;
 	}
 
-	public String setTotalCount(){
-		return totalCount;
+	public String getTotalCount(){
+		return this.totalCount;
 	}
 
-	public void getTotalCount(String totalCount){
+	public void setTotalCount(String totalCount){
 		this.totalCount=totalCount;
 	}
 
-	public String setPayment(){
-		return payment;
+	public String getPayment(){
+		return this.payment;
 	}
 
-	public void getPayment(String payment){
+	public void setPayment(String payment){
 		this.payment=payment;
 	}
 

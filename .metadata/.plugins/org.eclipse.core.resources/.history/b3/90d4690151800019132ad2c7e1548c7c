@@ -1,0 +1,5 @@
+package internousdev.ecsite.util;
+
+public class DBConnector {
+
+}

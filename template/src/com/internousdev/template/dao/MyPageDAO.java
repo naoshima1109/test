@@ -9,6 +9,7 @@ import com.internousdev.template.dto.MyPageDTO;
 import com.internousdev.template.util.DBConnector;
 
 public class MyPageDAO {
+	
 	public MyPageDTO getMyPageUserInfo(String item_transaction_id,String user_master_id)
 throws SQLException{
 		DBConnector dbConnector = new DBConnector();
