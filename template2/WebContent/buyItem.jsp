@@ -60,7 +60,10 @@
 		<div id="pr">
 		</div>
 	</div>
-	<div>
+	<div id="main">
+		<div id="top">
+			<p>BuyItem</p>
+		</div>
 		<s:form action="BuyItemAction">
 			<table>
 				<tr>
@@ -86,6 +89,7 @@
 					</td>
 					<td>
 						<select name="stock">
+						<option value="1" selected="selected">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>

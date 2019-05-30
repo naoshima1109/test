@@ -3,6 +3,7 @@ package com.internousdev.template2.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import com.internousdev.template2.dto.LoginDTO;
 import com.internousdev.template2.util.DBConnector;
@@ -15,7 +16,7 @@ public class LoginDAO {
 		Connection connection = dbConnector.getConnection();
 
 		LoginDTO loginDTO = new LoginDTO();
-		String sql="SELECT*FROM login_user_transaction where login_id =? AND login_pass=?";
+		String sql="SELECT * FROM login_user_transaction where login_id =? AND login_pass=?";
 
 		try{PreparedStatement preparedStatement =connection.prepareStatement(sql);
 
@@ -39,6 +40,28 @@ public class LoginDAO {
 			}
 
 			return loginDTO;
+		}
+
+		public int buyItemHistoryDelete(String item_transaction_id,String user_master_id)throws SQLException{
+			DBConnector dbConnector = new DBConnector();
+			Connection connection = dbConnector.getConnection();
+
+			String sql = "DELETE FROM user_buy_item_transaction WHERE item_transaction_id=? AND user_master_id = ?";
+			PreparedStatement preparedStatement;
+			int result = 0;
+
+			try{
+				preparedStatement = connection.prepareStatement(sql);
+				preparedStatement.setString(1,item_transaction_id);
+				preparedStatement.setString(2,user_master_id);
+
+				result = preparedStatement.executeUpdate();
+			}catch(SQLException e){
+				e.printStackTrace();
+			}finally{
+				connection.close();
+			}
+			return result;
 		}
 	}
 

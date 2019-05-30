@@ -23,3 +23,8 @@
 0:0:0:0:0:0:0:1 - - [28/May/2019:17:43:33 +0900] "GET /template2/ HTTP/1.1" 200 1466
 0:0:0:0:0:0:0:1 - - [28/May/2019:17:43:34 +0900] "POST /template2/HomeAction.action HTTP/1.1" 200 1983
 0:0:0:0:0:0:0:1 - - [28/May/2019:17:43:50 +0900] "POST /template2/LoginAction.action HTTP/1.1" 200 1466
+127.0.0.1 - - [28/May/2019:17:49:27 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [28/May/2019:17:49:28 +0900] "GET /template2/ HTTP/1.1" 200 1466
+0:0:0:0:0:0:0:1 - - [28/May/2019:17:49:30 +0900] "POST /template2/HomeAction.action HTTP/1.1" 200 1983
+0:0:0:0:0:0:0:1 - - [28/May/2019:17:49:39 +0900] "POST /template2/LoginAction.action HTTP/1.1" 200 1466
+0:0:0:0:0:0:0:1 - - [28/May/2019:17:49:40 +0900] "POST /template2/HomeAction.action HTTP/1.1" 200 1983
