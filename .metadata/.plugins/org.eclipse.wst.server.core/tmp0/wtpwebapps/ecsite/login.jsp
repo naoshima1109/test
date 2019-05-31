@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -69,11 +70,11 @@
 		<div>
 			<h3>商品を購入する際はログインをお願いします。</h3>
 			<s:form action="LoginAction">
-				<s:textfield name="loginUserId" />
-				<s:password name="loginpassword" />
-				<s:submit value="ログイン"/>
+				<s:textfield name = "loginUserId" />
+				<s:password name = "loginPassword" />
+				<s:submit value = "ログイン" />
 			</s:form>
-			<br>
+			<br/>
 			<div id="text-link">
 				<p>新規ユーザー登録は
 					<a href='<s:url action="UserCreateAction" />'>こちらから</a></p>

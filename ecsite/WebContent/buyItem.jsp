@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -101,16 +102,17 @@
 				</tr>
 				<tr>
 					<td>
-						<s:submit value="購入" />
+						<s:submit value="購入"/>
 					</td>
 				</tr>
 			</table>
 			</s:form>
 				<div>
+						<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 
+						<p>マイページは<a href='<s:url action="MyPageAction"/>'>こちら</a></p>
 				</div>
 		</div>
-
 	</div>
 	<div id="footer">
 		<div id="pr">

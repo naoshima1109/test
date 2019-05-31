@@ -13,4 +13,6 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.internousdev.template2.util.DBConnector"/>
+<fullyQualifiedTypeName name="javax.print.DocFlavor.STRING"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>
