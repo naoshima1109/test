@@ -39,6 +39,18 @@
 			<result name="error">userCreate.jsp</result>
 		</action>
 
+<!-- UserCreateCompleteAction -->
+		<action name="UserCreateCompleteAction"
+		class="com.internousdev.ecsite.action.UserCreateCompleteAction" method="execute">
+			<result name="success">userCreateComplete.jsp</result>
+		</action>
+
+		<!-- BuyItemAction -->
+		<action name="BuyItemAction"
+		class="com.internousdev.ecsite.action.BuyItemAction" method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+			<result name="error">buyItem.jsp</result>
+		</action>
 
 	</package>
 </struts>
