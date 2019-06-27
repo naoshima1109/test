@@ -1,6 +1,6 @@
 set names utf8;
 set foreign_key_checks=0;
-drop database if exists logindb naoshima;
+drop database if exists logindb_naoshima;
 create database logindb_naoshima;
 use logindb_naoshima;
 

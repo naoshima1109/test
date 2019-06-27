@@ -8,7 +8,7 @@
 <title>ログイン画面</title>
 </head>
 <body>
-	<s:form action="LoginAction">
+	<s:form action="LoginAction"> <!-- "name"と”password"を"LoginAction"に"submit"(送信) -->
 		<s:textfield name="name"/>
 		<s:password name="password"/>
 		<s:submit value="ログイン"/>

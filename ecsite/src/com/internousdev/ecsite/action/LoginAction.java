@@ -16,23 +16,23 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
-	public String execute() {
-		String result = ERROR;
-		loginDTO = loginDAO.getLoginUserInfo(loginUserId,loginPassword);
-		session.put("loginUser",loginDTO);
+	public String execute() {//実行メソッド
+		String result = ERROR;//エラーに返す
+		loginDTO = loginDAO.getLoginUserInfo(loginUserId,loginPassword);//dtoからdaoのgetLoginUserInfoを送られる
+		session.put("loginUser",loginDTO);//sessionに格納
 
-		if(((LoginDTO)session.get("loginUser")).getLoginFlg()){
+		if(((LoginDTO)session.get("loginUser")).getLoginFlg()){//もしログインできるなら
 			result = SUCCESS;
-			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
+			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();//dtoがdaoに送られる
 
-			session.put("login_user_id",loginDTO.getLoginId());
-			session.put("id",buyItemDTO.getId());
-			session.put("buyItem_name",buyItemDTO.getItemName());
-			session.put("buyItem_price",buyItemDTO.getItemPrice());
+			session.put("login_user_id",loginDTO.getLoginId());//dtoをsessionに格納
+			session.put("id",buyItemDTO.getId());//sessionに格納
+			session.put("buyItem_name",buyItemDTO.getItemName());//dtoをsessionに格納
+			session.put("buyItem_price",buyItemDTO.getItemPrice());//dtoをsessionに格納
 
-			return result;
+			return result;//resultに返す
 		}
-		return result;
+		return result;//resultに返す
 	}
 	public String getLoginUserId(){
 		return loginUserId;

@@ -4,10 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
 <title>ログイン成功画面</title>
 </head>
 <body>
 	<h1>ログインに成功しました。</h1>
+	<br>
+	<s:property value="name"/>さんおめでとう！
 </body>
 </html>

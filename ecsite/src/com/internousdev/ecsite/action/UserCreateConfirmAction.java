@@ -5,7 +5,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class UserCreateConfirmAction extends ActionSupport implements SessionAware{
+public class UserCreateConfirmAction extends ActionSupport implements SessionAware{//継承
 
 	private String loginUserId;
 	private String loginPassword;
@@ -13,20 +13,20 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	public Map<String,Object> session;
 	private String errorMessage;
 
-	public String execute(){
-		String result = SUCCESS;
+	public String execute(){//実行
+		String result = SUCCESS;//サクセスを実行userCreateConfirm.jspへ飛ぶ
 
-		if(!(loginUserId.equals(""))
+		if(!(loginUserId.equals(""))//ID、パスワード、ユーザーネームが全て記入されていたら実行
 				&&!(loginPassword.equals(""))
 				&&!(userName.equals(""))){
 					session.put("loginUserId",loginUserId);
 					session.put("loginPassword",loginPassword);
 					session.put("userName",userName);
-		}else{
+		}else{//もしそうでない場合、エラーメッセージで未入力の項目がありますと表示する
 			setErrorMessage("未入力の項目があります。");
-			result = ERROR;
+			result = ERROR;//エラー実行userCreate.jspに飛ぶ
 		}
-		return result;
+		return result;//resultに返す
 	}
 
 	public String getLoginUserId(){

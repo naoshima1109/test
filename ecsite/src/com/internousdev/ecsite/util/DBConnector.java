@@ -5,13 +5,13 @@ import java.sql.SQLException;
 
 public class DBConnector {
 
-	private static String driverName = "com.mysql.jdbc.Driver";
-	private static String url="jdbc:mysql://localhost/ecsite_naoshima";
+	private static String driverName = "com.mysql.jdbc.Driver";//ドライバー名
+	private static String url="jdbc:mysql://localhost/ecsite_naoshima";//mysqlURL
 
-	private static String user="root";
-	private static String password="mysql";
+	private static String user="root";//mysqlユーザー
+	private static String password="root";//mysqlパスワード
 
-		public Connection getConnection(){
+		public Connection getConnection(){//接続コード
 			Connection con = null;
 
 			try{

@@ -4,15 +4,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnector{
-	private static String driverName="com.mysql.jdbc.Driver";
-	private static String url="jdbc:mysql://localhost/logindb_naoshima";
+	private static String driverName="com.mysql.jdbc.Driver";//mysqlに接続
+	private static String url="jdbc:mysql://localhost/logindb_naoshima";//mysqlに接続
 	
 	
-	private static String user ="root";
-	private static String password="mysql";
+	private static String user ="root";//ユーザーネーム
+	private static String password="root";//mysqlのパスワード
 	
 	
-	public Connection getConnection(){
+	public Connection getConnection(){//mysqlを繋ぐコード
 		Connection con=null;
 		
 		try{

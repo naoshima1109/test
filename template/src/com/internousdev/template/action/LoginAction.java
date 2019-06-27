@@ -9,7 +9,7 @@ import com.internousdev.template.dao.LoginDAO;
 import com.internousdev.template.dto.BuyItemDTO;
 import com.internousdev.template.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
-public class LoginAction extends ActionSupport implements SessionAware{
+public class LoginAction extends ActionSupport implements SessionAware{//継承
 
 	private String loginUserId;
 	private String loginPassword;
@@ -17,29 +17,29 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private Map<String,Object> session;
 
 	public String execute(){
-		LoginDAO loginDAO = new LoginDAO();
-		LoginDTO loginDTO = new LoginDTO();
-		BuyItemDAO buyItemDAO =new BuyItemDAO();
+		LoginDAO loginDAO = new LoginDAO();//コピー
+		LoginDTO loginDTO = new LoginDTO();//コピー
+		BuyItemDAO buyItemDAO =new BuyItemDAO();//コピー
 
 
-		result=ERROR;
-		loginDTO=loginDAO.getLoginUserInfo(loginUserId, loginPassword);
-		session.put("loginUser",loginDTO);
+		result=ERROR;//実行結果エラー
+		loginDTO=loginDAO.getLoginUserInfo(loginUserId, loginPassword);//loginDAOで習得した情報をloginDTOに代入。
+		session.put("loginUser",loginDTO);//session.putという箱に格納
 
-		if(((LoginDTO)session.get("loginUser")).getLoginFlg()){
-			result = SUCCESS;
-			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
+		if(((LoginDTO)session.get("loginUser")).getLoginFlg()){//ユーザーが入力した情報を検索する
+			result = SUCCESS;//buyItem.jspに飛ぶ
+			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();//BuyItemDTOから取ってきた値をbuyItemDAOのgetBuyItemInfoに送る
 
 
-			session.put("login_user_id",loginDTO.getLoginId());
-			session.put("id",buyItemDTO.getId());
-			session.put("buyItem_name",buyItemDTO.getItemName());
-			session.put("buyItem_price",buyItemDTO.getItemPrice());
+			session.put("login_user_id",loginDTO.getLoginId());//sessionの箱にlogin_user_idとloginDTOのgetLoginIdを格納する
+			session.put("id",buyItemDTO.getId());//sessionの箱にidとbuyItemDTOのgetIdを格納する
+			session.put("buyItem_name",buyItemDTO.getItemName());//sessionの箱にbuyItem_nameとbuyItemDTOのgetItemNameを格納する
+			session.put("buyItem_price",buyItemDTO.getItemPrice());//sessionの箱にbuyItem_priceとbuyItemDTOのgetItemPriceを格納する
 
-			return result;
+			return result;//実行を返す
 
 	}
-	return result;
+	return result;//実行を返す
 		}
 
 	public String getLoginUserId(){

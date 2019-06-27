@@ -5,52 +5,71 @@
 <!-- Strutsの設定 -->
 
 <struts>
-	<constant name="struts.devMode" value="true"/>
-	<package name="com.internousdev.ecsite.action" extends="struts-default">
+	<constant name="struts.devMode" value="true"/><!-- strutsを動かす -->
+	<package name="com.internousdev.ecsite.action" extends="struts-default"><!-- パッケージの場所 -->
 
 <!-- GoHomeAction -->
 		<action name="GoHomeAction"
 		class="com.internousdev.ecsite.action.GoHomeAction" method="execute">
-			<result name="success">home.jsp</result>
+			<result name="success">home.jsp</result><!-- サクセスの場合home.jspに飛ぶ -->
 		</action>
 
 <!-- HomeAction -->
 		<action name="HomeAction" class="com.internousdev.ecsite.action.HomeAction" method="execute">
-			<result name="login">login.jsp</result>
-			<result name="success">buyItem.jsp</result>
+			<result name="login">login.jsp</result><!-- loginの場合login.jspに飛ぶ -->
+			<result name="success">buyItem.jsp</result><!-- サクセスの場合buyItem.jspに飛ぶ -->
 		</action>
 
 <!-- LoginAction -->
 		<action name="LoginAction" class="com.internousdev.ecsite.action.LoginAction" method="execute">
-			<result name="success">buyItem.jsp</result>
-			<result name="error">login.jsp</result>
+			<result name="success">buyItem.jsp</result><!-- サクセスの場合buyItem.jspに飛ぶ -->
+			<result name="error">login.jsp</result><!-- エラーの場合login.jspに飛ぶ -->
 		</action>
 
 <!-- UserCreateAction -->
 		<action name="UserCreateAction"
 		class="com.internousdev.ecsite.action.UserCreateAction" method="execute">
-			<result name="success">userCreate.jsp</result>
+			<result name="success">userCreate.jsp</result><!-- サクセスの場合userCreate.jspに飛ぶ -->
 		</action>
 
 <!-- UserCreateConfirmAction -->
 		<action name="UserCreateConfirmAction"
 		class="com.internousdev.ecsite.action.UserCreateConfirmAction" method="execute">
-			<result name="success">userCreateConfirm.jsp</result>
-			<result name="error">userCreate.jsp</result>
+			<result name="success">userCreateConfirm.jsp</result><!-- サクセスの場合userCreateConfirm.jspに飛ぶ -->
+			<result name="error">userCreate.jsp</result><!-- エラーの場合userCreate.jspに飛ぶ -->
 		</action>
 
 <!-- UserCreateCompleteAction -->
 		<action name="UserCreateCompleteAction"
 		class="com.internousdev.ecsite.action.UserCreateCompleteAction" method="execute">
-			<result name="success">userCreateComplete.jsp</result>
+			<result name="success">userCreateComplete.jsp</result><!-- サクセスの場合userCreateComplete.jspに飛ぶ -->
 		</action>
 
-		<!-- BuyItemAction -->
+<!-- BuyItemAction -->
 		<action name="BuyItemAction"
 		class="com.internousdev.ecsite.action.BuyItemAction" method="execute">
-			<result name="success">buyItemConfirm.jsp</result>
-			<result name="error">buyItem.jsp</result>
+			<result name="success">buyItemConfirm.jsp</result><!-- サクセスの場合buyItemConfirm.jspに飛ぶ -->
+			<result name="error">buyItem.jsp</result><!-- エラーの場合buyItem.jspに飛ぶ -->
 		</action>
 
+<!-- BuyItemConfirmAction -->
+		<action name="BuyItemConfirmAction"
+		class="com.internousdev.ecsite.action.BuyItemConfirmAction" method="execute">
+			<result name="success">buyItemComplete.jsp</result><!-- サクセスの場合buyItemComplete.jspに飛ぶ -->
+			<result name="back">buyItem.jsp</result><!-- バックする場合buyItem.jspに飛ぶ -->
+		</action>
+
+<!-- MyPageAction -->
+	<action name="MyPageAction"
+		class="com.internousdev.ecsite.action.MyPageAction" method="execute">
+			<result name="success">myPage.jsp</result><!-- サクセスの場合myPage.jspに飛ぶ -->
+			<result name="error">home.jsp</result><!-- エラーの場合home.jspに飛ぶ -->
+		</action>
+
+<!-- LogoutAction -->
+	<action name="LogoutAction"
+		class="com.internousdev.ecsite.action.LogoutAction" method="execute">
+			<result name="success">home.jsp</result><!-- サクセスの場合home.jspに飛ぶ -->
+		</action>
 	</package>
 </struts>
